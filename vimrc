@@ -66,8 +66,9 @@ Plug 'vimwiki/vimwiki'
 Plug 'suan/vim-instant-markdown'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-scripts/gdbmgr'
-"Plug 'valloric/youcompleteme'
-
+"input method change tools,need extra lib
+"Plug 'lyokha/vim-xkbswitch'
+Plug 'yuratomo/w3m.vim'
 Plug 'iamcco/markdown-preview.nvim'
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
 call plug#end()
@@ -86,5 +87,6 @@ function! s:isAtStartOfLine(mapping)
 	     inoreabbrev <expr> __
 	          \ <SID>isAtStartOfLine('__') ?
 	          \ '<c-o>:silent! TableModeDisable<cr>' : '__'
-
-
+"let xkbswitch auto
+let g:XkbSwitchEnabled = 1
+let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
