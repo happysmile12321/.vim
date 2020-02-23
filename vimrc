@@ -21,48 +21,43 @@ map s <nop>
 map e <nop>
 map S :w<CR>
 map Q :q<CR>
-map R :source $MYVIMRC<CR>
-map ; :
-
+"Source vimrc
+map R :source ~/.vim/vimrc<CR>
 map sl :set splitright<CR>:vsplit<CR>
 map sh :set nosplitright<CR>:vsplit<CR>
 map sk :set nosplitbelow<CR>:split<CR>
 map sj :set splitbelow<CR>:split<CR>
 map e :e  
-
 let mapleader=" "
 map <LEADER>h <C-w>h
 map <LEADER>j <C-w>j
 map <LEADER>k <C-w>k
 map <LEADER>l <C-w>l
-"map <LEADER>n  :term python<CR>
-
-
-
-
-
-
-
 map <up> :res +5<CR>
 map <down> :res -5<CR>
 map <left> :vertical resize-5<CR>
 map <right> :vertical resize+5<CR>
-
 map tu :tabe<CR>
 map tn :-tabnext<CR>
 map ti :tabnext<CR>
-map <LEADER>rc :e ~/.config/nvim/init.vim<CR>
 
 
+"open VIM config anywhere
+map <LEADER>rc :e ~/.vim/vimrc<CR>
 
-
+"plug:vim-tableMod
 map t :TableModeToggle<CR>
 map o :q<CR>
+
+"handle vim's paste area
 set paste
 
 
 
 
+
+
+" My Translate plug (Needs JDK1.8 and later~)
 noremap <LEADER>n :let a=expand("<cword>")<Bar>exec'!java -jar /home/happysmile/.vim/plugged/youdaosearch.jar ' .a<CR>
 
 call plug#begin('~/.vim/plugged')
@@ -76,17 +71,6 @@ Plug 'vim-scripts/gdbmgr'
 Plug 'iamcco/markdown-preview.nvim'
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
 call plug#end()
-
-
-
-
-
-
-
-
-
-
-
 
 
 " set vim-table-mode
