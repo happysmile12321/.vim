@@ -66,7 +66,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'iamcco/markdown-preview.nvim'
-"Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki'
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
 call plug#end()
 
