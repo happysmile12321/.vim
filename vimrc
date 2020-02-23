@@ -59,12 +59,14 @@ noremap <LEADER>n :let a=expand("<cword>")<Bar>exec'!java -jar /home/happysmile/
 
 call plug#begin('~/.vim/plugged')
 Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
-Plug 'vimwiki/vimwiki'
 Plug 'suan/vim-instant-markdown'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-scripts/gdbmgr'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'iamcco/markdown-preview.nvim'
+Plug 'mhinz/vim-startify'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'iamcco/markdown-preview.nvim'
+"Plug 'vimwiki/vimwiki'
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
 call plug#end()
 
