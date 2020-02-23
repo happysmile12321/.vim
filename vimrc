@@ -53,12 +53,9 @@ map o :q<CR>
 set paste
 
 
-
-
-
-
 " My Translate plug (Needs JDK1.8 and later~)
 noremap <LEADER>n :let a=expand("<cword>")<Bar>exec'!java -jar /home/happysmile/.vim/plugged/youdaosearch.jar ' .a<CR>
+
 
 call plug#begin('~/.vim/plugged')
 Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
@@ -66,9 +63,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'suan/vim-instant-markdown'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-scripts/gdbmgr'
-"input method change tools,need extra lib
-"Plug 'lyokha/vim-xkbswitch'
-Plug 'yuratomo/w3m.vim'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'iamcco/markdown-preview.nvim'
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
 call plug#end()
@@ -87,6 +82,8 @@ function! s:isAtStartOfLine(mapping)
 	     inoreabbrev <expr> __
 	          \ <SID>isAtStartOfLine('__') ?
 	          \ '<c-o>:silent! TableModeDisable<cr>' : '__'
-"let xkbswitch auto
-let g:XkbSwitchEnabled = 1
-let g:XkbSwitchLib = '/usr/local/lib/libxkbswitch.so'
+"vim-plug airline theme
+
+let g:airline_theme='simple'
+
+
