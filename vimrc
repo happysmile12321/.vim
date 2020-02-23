@@ -63,23 +63,7 @@ set paste
 
 
 
-" call python (some crazy ideas)
-"map <LEADER>n sj :term python<CR>
-"map <LEADER>v :term exit()<CR>
-"<C-n> can escap from the visual term
-"map <LEADER>n sj <down><down>:term java -jar $MYVIMPATH/youdaorun.jar<CR><C-n><LEADER>k
-"map <LEADER>n sj <down><down>:term java -jar /home/happysmile/.config/nvim/plugged/youdaosearch.jar<CR>apple<C-n><CR><LEADER>k
-"map <LEADER>n sj <down><down>:term python3<CR><C-n><LEADER>k
-""map <LEADER>n sj <down><down>:term j j javaava ava -jar /home/happysmile/.config/nvim/plugged/youdaosearch.jar<CR>apple
-" 找到怎么copy屏幕上的词
-" :s/normal char/you need char
-"map <LEADER>n y sj <down><down>  
-"map <LEADER>n y sj <down><down> :term python3 %
-"map <LEADER>n :call <SID>test()
-"function! s:test()
-	":term echo java -jar /home/happysmile/.config/nvim/plugged/youdaosearch.jar  <cword>
-	"endfunction
-noremap <LEADER>n :let a=expand("<cword>")<Bar>exec'!java -jar /home/happysmile/.config/nvim/plugged/youdaosearch.jar ' .a<CR>
+noremap <LEADER>n :let a=expand("<cword>")<Bar>exec'!java -jar /home/happysmile/.vim/plugged/youdaosearch.jar ' .a<CR>
 
 call plug#begin('~/.vim/plugged')
 Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle' }
